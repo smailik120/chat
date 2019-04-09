@@ -1,4 +1,4 @@
-package main.java.Main;
+package Main;
 
 import javax.swing.*;
 import java.awt.event.ActionEvent;
@@ -9,10 +9,10 @@ import java.net.Socket;
 
 public class UserApp {
     public static void main(String args[]) throws IOException, InterruptedException {
-        Socket socket = new Socket("192.168.56.1",80);
+        final Socket socket = new Socket("192.168.56.1",80);
         JFrame frame = new JFrame("Server");
         frame.setSize(600,600);
-        JTextField field = new JTextField("enter text");
+        final JTextField field = new JTextField("enter text");
         JButton button = new JButton("send message");
         button.addActionListener(new ActionListener() {
             @Override
