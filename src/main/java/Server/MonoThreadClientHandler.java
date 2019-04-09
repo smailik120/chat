@@ -1,4 +1,4 @@
-package Server;
+package main.java.Server;
 
 import java.io.DataInputStream;
 import java.io.DataOutputStream;
@@ -22,12 +22,15 @@ public class MonoThreadClientHandler implements Runnable {
             while (!clientDialog.isClosed()) {
                 String entry = in.readUTF();
                 System.out.println(entry);
+                Thread.sleep(30);
+
+                out.writeUTF("losos");
                 out.flush();
             }
-            in.close();
-            out.close();
             clientDialog.close();
         } catch (IOException e) {
+            e.printStackTrace();
+        } catch (InterruptedException e) {
             e.printStackTrace();
         }
     }
