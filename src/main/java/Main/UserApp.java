@@ -9,7 +9,7 @@ import java.net.Socket;
 
 public class UserApp {
     public static void main(String args[]) throws IOException, InterruptedException {
-        Socket socket = new Socket(InetAddress.getByName("109.194.124.131"),80);
+        Socket socket = new Socket("localhost",80);
         JFrame frame = new JFrame("Server");
         frame.setSize(600,600);
         JTextField field = new JTextField("enter text");
