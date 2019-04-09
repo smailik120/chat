@@ -22,7 +22,7 @@ public class MultiThreadServer {
     public static void main(String[] args) {
 
         // стартуем сервер на порту 3345 и инициализируем переменную для обработки консольных команд с самого сервера
-        try (ServerSocket server = new ServerSocket(80);
+        try (ServerSocket server = new ServerSocket(Integer.parseInt(System.getenv("PORT")));
              BufferedReader br = new BufferedReader(new InputStreamReader(System.in))) {
             while (!server.isClosed()) {
                 Socket client = server.accept();

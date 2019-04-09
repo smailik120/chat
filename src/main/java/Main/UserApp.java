@@ -9,7 +9,7 @@ import java.net.Socket;
 
 public class UserApp {
     public static void main(String args[]) throws IOException, InterruptedException {
-        final Socket socket = new Socket("192.168.56.1",80);
+        final Socket socket = new Socket("chatapplicationmobileversion.herokuapp.com",40506);
         JFrame frame = new JFrame("Server");
         frame.setSize(600,600);
         final JTextField field = new JTextField("enter text");
